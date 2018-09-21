@@ -9,22 +9,22 @@ Zig.Client.Messages.messageClient.register(logEvent);
 // wait for the player to start the game
 Zig.Client.Messages.registerGeneric({
     async playGame() {
-        Game.runGame(await Zig.Client.buyTicket());
+        Game.runGame(Zig.Client.buyTicket());
     },
 
     async playDemoGame() {
-        Game.runGame(await Zig.Client.demoTicket())
+        Game.runGame(Zig.Client.demoTicket())
     },
 });
 
 const Game = {
-    async runGame() {
+    async runGame(ticket$) {
         // get the ticket
-        const ticket = await Zig.Client.buyTicket();
+        const ticket = await ticket$;
 
-        // // in case of error:
+        // // you should handle errors, similar to this:
         // try {
-        //     // ...
+        //     // await ...
         // } catch(err) {
         //     Zig.Client.Messages.error(err)
         // }
