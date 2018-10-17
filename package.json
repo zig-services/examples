@@ -12,6 +12,6 @@
   "dependencies": {
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
-    "zig-js": "^1.0.21"
+    "zig-js": "^1.0.30-beta.1"
   }
 }
