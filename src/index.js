@@ -20,6 +20,8 @@ window.onload = async () => {
             Game.runGame(Zig.Client.demoTicket())
         },
     });
+
+    Zig.Client.Messages.gameLoaded();
 };
 
 const Game = {
@@ -52,7 +54,3 @@ function logEvent(event) {
     div.innerText = JSON.stringify(event);
     document.querySelector("#events").appendChild(div);
 }
-
-window.onload = () => {
-    Zig.Client.Messages.gameLoaded();
-};

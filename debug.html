@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    // get url to outer.html
+    const url = new URL(location.href);
+    url.pathname = "/outer.html";
+
+    const baseUrl = "https://mylotto24.frontend.zig.services/dev/demo/demo.html";
+    location.href = baseUrl + "?demoConfig=" + encodeURIComponent(JSON.stringify({
+        url: url.toString(),
+        name: "demo",
+        data: {
+            scenario: {content: "demo scenario"},
+        }
+    }));
+</script>
+
+</html>
