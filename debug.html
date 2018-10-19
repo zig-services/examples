@@ -7,11 +7,21 @@
     url.pathname = "/outer.html";
 
     const baseUrl = "https://mylotto24.frontend.zig.services/dev/demo/demo.html";
+
     location.href = baseUrl + "?demoConfig=" + encodeURIComponent(JSON.stringify({
         url: url.toString(),
         name: "demo",
         data: {
-            scenario: {content: "demo scenario"},
+            // Winnings of your simulated ticket (in minor units, e.g euro cent)
+            winningsInMinor: 0,
+
+            // scenario of the resulting ticket. should obviously match the winnings.
+            scenario: {
+                // Your scenario content here. The scenario will be encoded to json
+                // and base64 encoded. You can get it back on the ticket returned by
+                // buyTicket using the field `ticket.scenario` or decoded
+                // as object in `ticket.decodedScenario`.
+            },
         }
     }));
 </script>
