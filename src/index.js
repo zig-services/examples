@@ -36,7 +36,7 @@ const Game = {
         try {
             await Game.play(ticket)
         } catch (err) {
-            Zig.Client.Messages.error(err)
+            Zig.Client.Messages.error(err);
             return;
         }
 
