@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0",
-    "zig-js": "^1.0.32"
+    "webpack": "4.17.1",
+    "webpack-cli": "3.1.0",
+    "zig-js": "1.2.6"
   }
 }
