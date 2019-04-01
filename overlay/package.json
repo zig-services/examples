@@ -1,0 +1,17 @@
+{
+  "name": "zig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack-cli --mode=production",
+    "watch": "webpack-cli --mode=production --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "4.17.1",
+    "webpack-cli": "3.1.0",
+    "zig-js": "1.2.6"
+  }
+}
